@@ -24,6 +24,11 @@ function addUser() {
     alert("Todos los campos son obligatorios.");
     return;
   }
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (!emailRegex.test(email)) {
+  alert("Correo no válido.");
+  return;
+}
 
   if (editingIndex === -1) {
     users.push({ name, email });
