@@ -36,6 +36,8 @@ function addUser() {
   clearForm();
   renderTable();
 }
+console.log("Usuario guardado en localStorage");
+
 
 function editUser(index) {
   document.getElementById("name").value = users[index].name;
